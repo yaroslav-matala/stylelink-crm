@@ -1,5 +1,9 @@
 {% load static %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +13,13 @@
     <title>Stylelink - Simple Client Manager</title>
 
     <!-- bootstrap bootswatch morph theme -->
-    {% comment %} <link rel="stylesheet" href="{% static 'css/bootstrap-morph.css'%}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap-morph.css'%}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
     <!-- navbar here -->
+     
 
     <div class="container">
         <br>
