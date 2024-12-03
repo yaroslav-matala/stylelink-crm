@@ -7,3 +7,7 @@ class HomePage(TemplateView):
     Displays home page"
     """
     template_name = 'index.html'
+
+def home(request):
+
+    return render(request, 'client_manager/index.html')
