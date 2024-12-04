@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AddClientForm, UpdateClientForm
 
 from django.contrib.auth.decorators import login_required
@@ -39,3 +39,22 @@ def add_client(request):
     context = {'form': form}
 
     return render(request, 'client_manager/add-client.html', context)
+
+# - Updaate a client
+@login_required(login_url='accounts/login')
+def update_client(request, pk):
+    # Get the client or return a 404 error if not found
+    client = get_object_or_404(Client, id=pk, user=request.user)
+
+    # Initialize the form with the existing client data
+    form = UpdateClientForm(instance=client)
+
+    if request.method == "POST":
+        form = UpdateClientForm(request.POST, instance=client)
+
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')
+
+    context = {'form': form, 'client': client} 
+    return render(request, 'client_manager/update-client.html', context)

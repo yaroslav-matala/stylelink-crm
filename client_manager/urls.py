@@ -7,5 +7,6 @@ urlpatterns = [
     
     # CRUD
     path('dashboard', views.dashboard, name="dashboard"),
-    path('add-client', views.add_client, name='add-client')
+    path('add-client', views.add_client, name='add-client'),
+    path('update-client/<int:pk>/', views.update_client, name='update-client'),
 ]
