@@ -2,13 +2,13 @@
 
 {% block content %}
 
-    <h1 class="mt-1">Welcome to the Dashboard page, {{user}} </h1>
+    <h1 class="mt-1">Welcome to the Dashboard page, <span class="text-capitalize"> {{user}} </span> </h1>
     
-    <a href="{% url 'dashboard' %}" class="btn btn-outline-dark btn-lg mt-2">Add New Client</a>
+    <a href="{% url 'add-client' %}" class="btn btn-outline-dark btn-lg mt-2">Add New Client</a>
     <hr>
 
-    <table class="table table-light">
-        <thead class="table-dark">
+    <table class="table table-dark table-hover">
+        <thead class="table-light">
             <tr>
                 <th scope="col"> ID </th>
                 <th scope="col"> Name </th>
