@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from . models import Client
 
 # Create your views here.
 
@@ -10,4 +11,9 @@ def home(request):
 # - Dashboard
 @login_required(login_url='accounts/login')
 def dashboard(request):
-    return render(request, 'client_manager/dashboard.html')
+
+    my_clients = Client.objects.filter(user=request.user)
+
+    context = {'clients': my_clients}
+
+    return render(request, 'client_manager/dashboard.html', context=context)
