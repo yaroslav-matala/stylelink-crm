@@ -2,14 +2,49 @@
 
 {% block content %}
 
-    <h1>Welcome to the Dashboard page! {{user}} </h1>
+    <h1 class="mt-1">Welcome to the Dashboard page, {{user}} </h1>
+    
+    <a href="{% url 'dashboard' %}" class="btn btn-outline-dark btn-lg mt-2">Add New Client</a>
+    <hr>
 
-    {% for client in clients %}
+    <table class="table table-light">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col"> ID </th>
+                <th scope="col"> Name </th>
+                <th scope="col"> Email </th>
+                <th scope="col"> Phone </th>
+                <th scope="col"> Location </th>
+                <th scope="col"> Formula </th>
+                <th scope="col"> Notes </th>
+                <th scope="col"> Price </th>
+                <th scope="lol"> Date Added </th>
+                <th scope="lol"> View </th>
+            </tr>
+        </thead>
 
-        {{client.id}}
-        {{client.name}}
-        {{client.location}}
+        <tbody>
 
-    {% endfor %}
+        {% if clients %}
+            {% for client in clients %}
+
+            <tr>
+                <td> {{client.id}} </td>
+                <td> {{client.name}} </td>
+                <td> {{client.email}} </td>
+                <td> {{client.phone}} </td>
+                <td> {{client.location}} </td>
+                <td> {{client.formula}} </td>
+                <td> {{client.notes}} </td>
+                <td> {{client.price}} </td>
+                <td> {{client.creation_date}} </td>
+                <td> view </td>
+            </tr>
+
+            {% endfor %}
+            {% endif %}
+
+        </tbody>
+    </table>
 
 {% endblock %}

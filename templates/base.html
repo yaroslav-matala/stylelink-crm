@@ -13,13 +13,13 @@
     <title>Stylelink - Simple Client Manager</title>
 
     <!-- bootstrap bootswatch morph theme -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap-morph.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-quartz.css'%}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
      <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark stylelink-navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="thin">stylelink</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -52,18 +52,14 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    adventures of a hairstylist
-                </span>
+                    {% if user.is_authenticated %}
+                    <span class="navbar-text">You are logged in as {{ user }}</span>
+                    {% else %}
+                    <span class="navbar-text">You are not logged in</span>
+                    {% endif %}
             </div>
         </div>
     </nav>
-
-    {% if user.is_authenticated %}
-    <p class="text-end m-3">You are logged in as {{ user }}</p>
-    {% else %}
-    <p class="text-end m-3">You are not logged in</p>
-    {% endif %}
      
 
     <div class="container">

@@ -4,3 +4,13 @@
     margin-right: auto;
     width: 50%;
   }
+
+  hr {
+    opacity: 0.5;
+    border-bottom: 1px ridge;
+  }
+
+  .stylelink-navbar {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
