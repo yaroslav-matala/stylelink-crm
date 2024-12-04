@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-# class HomePage(TemplateView):
-#     """
-#     Displays home page"
-#     """
-#     template_name = 'index.html'
 
+# - Homepage
 def home(request):
-
     return render(request, 'client_manager/index.html')
+
+# - Dashboard
+@login_required(login_url='accounts/login')
+def dashboard(request):
+    return render(request, 'client_manager/dashboard.html')
