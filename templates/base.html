@@ -15,6 +15,11 @@
     <!-- bootstrap bootswatch morph theme -->
     <link rel="stylesheet" href="{% static 'css/bootstrap-quartz.css'%}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href=" {% static 'favicon/favicon-32x32.png'%} ">
+    <link rel="icon" type="image/png" sizes="16x16" href=" {% static 'favicon/favicon-16x16.png'%} ">
+    {% comment %} <link rel="manifest" href=" {% static 'site.webmanifest' %} "> {% endcomment %}
 </head>
 
 <body>
@@ -35,20 +40,20 @@
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page"
-                            href="{% url 'dashboard' %}">Dashboard <i class="fa-solid fa-home"></i></a>
+                            href="{% url 'dashboard' %}"><i class="fa-solid fa-home"></i> Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                            href="{% url 'account_logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}">Register <i class="fa-solid fa-user-plus"></i></a>
+                            href="{% url 'account_signup' %}"><i class="fa-solid fa-user-plus"></i> Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_login' %}">Login <i class="fa-solid fa-right-from-bracket"></i></a>
+                            href="{% url 'account_login' %}"><i class="fa-solid fa-right-from-bracket"></i> Login</a>
                     </li>
                     {% endif %}
                 </ul>
