@@ -4,16 +4,16 @@
 {% block content %}
 
     <div class="card text-white bg-dark mb-3">
-        <div class="card-header fs-4">{{client.name}}</div>
+        <div class="card-header fs-4"><i class="fa-solid fa-user"></i> &nbsp; {{client.name}}</div>
         <div class="card-body">
-            <p class="fs-5"><strong>ID: </strong> {{ client.id }} </p>
-            <p class="fs-5"><strong>Email: </strong> {{ client.email }} </p>
-            <p class="fs-5"><strong>Phone number: </strong> {{ client.phone }} </p>
-            <p class="fs-5"><strong>Location: </strong> {{ client.location }} </p>
-            <p class="fs-5"><strong>Formula: </strong> {{ client.formula }} </p>
-            <p class="fs-5"><strong>Notes: </strong> {{ client.notes }} </p>
-            <p class="fs-5"><strong>Price: </strong> {{ client.price }} </p>
-            <p class="fs-5"><strong>Creation date: </strong> {{ client.creation_date }} </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">ID: </span> &nbsp; <span class="fw-bold">{{ client.id }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Email: </span> &nbsp;  <span class="fw-bold">{{ client.email }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Phone: </span> &nbsp;  <span class="fw-bold">{{ client.phone }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Location: </span> &nbsp;  <span class="fw-bold">{{ client.location }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Formula: </span> &nbsp;  <span class="fw-bold">{{ client.formula }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Notes: </span> &nbsp;  <span class="fw-bold">{{ client.notes }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Price: </span> &nbsp;  <span class="fw-bold">{{ client.price }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Creation date: </span> &nbsp;  <span class="fw-bold">{{ client.creation_date }}</span> </p>
         </div>
     </div>
 
