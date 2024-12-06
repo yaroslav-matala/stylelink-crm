@@ -30,3 +30,11 @@ html, body {
 .content {
   flex: 1; /* Push the footer to the bottom */
 }
+
+.footer-hr {
+  margin: 1rem 0;
+}
+
+.btn-slink-add {
+  margin-bottom: 1.5rem;
+}

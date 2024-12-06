@@ -2,11 +2,9 @@
 
 {% block content %}
 
-    <h1 class="mt-1">Welcome to the Dashboard page, <span class="text-capitalize"> {{user}} </span> </h1>
+    <h1 class="">Welcome to the Dashboard page, <span class="text-capitalize"> {{user}} </span> </h1>
     
-    <a href="{% url 'add-client' %}" class="btn btn-dark btn-lg mt-2">Add New Client</a>
-    <br>
-    <br>
+    <a href="{% url 'add-client' %}" class="btn btn-dark btn-lg btn-slink-add">Add New Client</a>
 
     <div class="table-responsive">
         <table class="table table-dark table-hover">
