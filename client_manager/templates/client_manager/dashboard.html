@@ -6,6 +6,19 @@
     
     <a href="{% url 'add-client' %}" class="btn btn-dark btn-lg btn-slink-add">Add New Client</a>
 
+    <form method="GET" action="{% url 'dashboard' %}" class="mb-3">
+        <div class="input-group">
+            <input
+                type="text"
+                name="search"
+                class="form-control"
+                placeholder="Search clients by name..."
+                value="{{ search_query }}"
+            >
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </form>
+
     <div class="table-responsive">
         <table class="table table-dark table-hover table-sm">
             <thead class="table-light">
@@ -26,6 +39,10 @@
                     <td class="fs-5 py-2"><a href="{% url 'client' client.id %}" class="btn btn-light btn-sm">OPEN <i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
                 </tr>
                 {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4" class="text-center">No clients found.</td>
+                    </tr>
                 {% endif %}
             </tbody>
         </table>
@@ -38,7 +55,7 @@
                     <a class="page-link" href="?page=1">First</a>
                 </li>
                 <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    <a class="page-link" href="?search={{ search_query }}&page={{ page_obj.previous_page_number }}">Previous</a>
                 </li>
                 {% endif %}
 
@@ -50,7 +67,7 @@
 
                 {% if page_obj.has_next %}
                 <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a class="page-link" href="?search={{ search_query }}&page={{ page_obj.next_page_number }}">Next</a>
                 </li>
                 <li class="page-item">
                     <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>

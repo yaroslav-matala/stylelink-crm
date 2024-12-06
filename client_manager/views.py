@@ -1,4 +1,5 @@
 from django.core.paginator import Paginator
+from django.db.models import Q
 
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AddClientForm, UpdateClientForm
@@ -21,14 +22,21 @@ def home(request):
 @login_required(login_url='accounts/login')
 def dashboard(request):
 
+    search_query = request.GET.get('search', '')
     my_clients = Client.objects.filter(user=request.user)
+
+    if search_query:
+        my_clients = my_clients.filter(name__icontains=search_query)
 
     # Add pagination
     paginator = Paginator(my_clients, 5) 
     page_number = request.GET.get('page') 
     page_obj = paginator.get_page(page_number) 
 
-    context = {'page_obj': page_obj}
+    context = {
+        'page_obj': page_obj,
+        'search_query': search_query,
+    }
 
     return render(request, 'client_manager/dashboard.html', context)
 
