@@ -24,7 +24,7 @@ class UpdateClientForm(forms.ModelForm):
     class Meta:
         model = Client
         fields = ['name', 'email', 'phone', 'location', 'formula', 'notes', 'price']
-        idgets = {
+        widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Enter Client Name'}),
             'email': forms.EmailInput(attrs={'placeholder': 'example@example.com'}),
             'phone': forms.TextInput(attrs={'placeholder': 'Enter Client Phone Number'}),
