@@ -25,6 +25,7 @@ def dashboard(request):
     search_query = request.GET.get('search', '')
     my_clients = Client.objects.filter(user=request.user)
 
+    # search
     if search_query:
         my_clients = my_clients.filter(name__icontains=search_query)
 
