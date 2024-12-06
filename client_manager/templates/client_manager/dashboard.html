@@ -7,44 +7,41 @@
     <a href="{% url 'add-client' %}" class="btn btn-outline-dark btn-lg mt-2">Add New Client</a>
     <hr>
 
-    <table class="table table-dark table-hover">
-        <thead class="table-light">
-            <tr>
-                <th scope="col"> ID </th>
-                <th scope="col"> Name </th>
-                <th scope="col"> Email </th>
-                <th scope="col"> Phone </th>
-                <th scope="col"> Location </th>
-                <th scope="col"> Formula </th>
-                <th scope="col"> Notes </th>
-                <th scope="col"> Price </th>
-                <th scope="lol"> Date Added </th>
-                <th scope="lol"> View </th>
-            </tr>
-        </thead>
-
-        <tbody>
-
-        {% if clients %}
-            {% for client in clients %}
-
-            <tr>
-                <td> {{client.id}} </td>
-                <td> {{client.name}} </td>
-                <td> {{client.email}} </td>
-                <td> {{client.phone}} </td>
-                <td> {{client.location}} </td>
-                <td> {{client.formula}} </td>
-                <td> {{client.notes}} </td>
-                <td> {{client.price}} </td>
-                <td> {{client.creation_date}} </td>
-                <td><a href=" {% url 'client' client.id %} ">view client</a></td>
-            </tr>
-
-            {% endfor %}
-            {% endif %}
-
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-dark table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"> ID </th>
+                    <th scope="col"> Name </th>
+                    <th scope="col"> Email </th>
+                    <th scope="col"> Phone </th>
+                    <th scope="col"> Location </th>
+                    <th scope="col"> Formula </th>
+                    <th scope="col"> Notes </th>
+                    <th scope="col"> Price </th>
+                    <th scope="lol"> Date Added </th>
+                    <th scope="lol"> View </th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if clients %}
+                {% for client in clients %}
+                <tr>
+                    <td> {{client.id}} </td>
+                    <td> {{client.name}} </td>
+                    <td> {{client.email}} </td>
+                    <td> {{client.phone}} </td>
+                    <td> {{client.location}} </td>
+                    <td> {{client.formula}} </td>
+                    <td> {{client.notes}} </td>
+                    <td> {{client.price}} </td>
+                    <td> {{client.creation_date}} </td>
+                    <td><a href="{% url 'client' client.id %}">view client</a></td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
 
 {% endblock %}

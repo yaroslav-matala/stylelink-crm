@@ -3,6 +3,8 @@ from .forms import AddClientForm, UpdateClientForm
 
 from django.contrib.auth.decorators import login_required
 
+from django.http import HttpResponseForbidden
+
 from .models import Client
 
 # Create your views here.
@@ -82,3 +84,15 @@ def singular_client(request, pk):
     except Client.DoesNotExist:
         # If the client does not exist or doesn't belong to the logged-in user
         return redirect('dashboard')
+
+# - Delete a record
+
+@login_required(login_url='accounts/login')
+def delete_client(request, pk):
+
+    # Ensure the client exists and belongs to the logged-in user
+    client = get_object_or_404(Client, id=pk, user=request.user)
+
+    client.delete()
+
+    return redirect('dashboard')
