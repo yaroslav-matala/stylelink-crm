@@ -1,3 +1,5 @@
+from django.core.paginator import Paginator
+
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AddClientForm, UpdateClientForm
 
@@ -6,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 
 from .models import Client
+
+from django.contrib import messages
 
 # Create your views here.
 
@@ -19,7 +23,12 @@ def dashboard(request):
 
     my_clients = Client.objects.filter(user=request.user)
 
-    context = {'clients': my_clients}
+    # Add pagination
+    paginator = Paginator(my_clients, 5) 
+    page_number = request.GET.get('page') 
+    page_obj = paginator.get_page(page_number) 
+
+    context = {'page_obj': page_obj}
 
     return render(request, 'client_manager/dashboard.html', context)
 
@@ -36,6 +45,9 @@ def add_client(request):
             client = form.save(commit=False)  
             client.user = request.user      
             client.save() 
+
+            messages.success(request, "New client was added")
+
             return redirect('dashboard')
     
     context = {'form': form}
@@ -56,9 +68,13 @@ def update_client(request, pk):
 
         if form.is_valid():
             form.save()
+
+            messages.success(request, "Client updated successfully")
+
             return redirect('dashboard')
 
     context = {'form': form, 'client': client} 
+    
     return render(request, 'client_manager/update-client.html', context)
 
 # - Read a singular client
@@ -94,5 +110,7 @@ def delete_client(request, pk):
     client = get_object_or_404(Client, id=pk, user=request.user)
 
     client.delete()
+
+    messages.success(request, "Client deleted successfully")
 
     return redirect('dashboard')

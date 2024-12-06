@@ -38,3 +38,7 @@ html, body {
 .btn-slink-add {
   margin-bottom: 1.5rem;
 }
+
+.message-text {
+  color: white;
+}

@@ -40,24 +40,23 @@
                             {% if user.is_authenticated %}
                             <li class="nav-item">
                                 <a class="nav-link fw-bold fs-4 {% if request.path == '/dashboard' %}active{% endif %}"
-                                    aria-current="page" href="{% url 'dashboard' %}"><i class="fa-solid fa-home"></i>
-                                    Dashboard</a>
+                                    aria-current="page" href="{% url 'dashboard' %}"><i class="fa-solid fa-home"></i>&nbsp;&nbsp;Dashboard</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fw-bold fs-4 {% if request.path == logout_url %}active{% endif %}"
                                     aria-current="page" href="{% url 'account_logout' %}"><i
-                                        class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                                        class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Logout</a>
                             </li>
                             {% else %}
                             <li class="nav-item">
                                 <a class="nav-link fw-bold fs-4 {% if request.path == signup_url %}active{% endif %}"
                                     aria-current="page" href="{% url 'account_signup' %}"><i
-                                        class="fa-solid fa-user-plus"></i> Register</a>
+                                        class="fa-solid fa-user-plus"></i>&nbsp;Register</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fw-bold fs-4 {% if request.path == login_url %}active{% endif %}"
                                     aria-current="page" href="{% url 'account_login' %}"><i
-                                        class="fa-solid fa-right-from-bracket"></i> Login</a>
+                                        class="fa-solid fa-right-from-bracket"></i>&nbsp;Login</a>
                             </li>
                             {% endif %}
                         </ul>
@@ -73,9 +72,26 @@
             <div class="container">
                 <br>
                 <!-- Notification messages -->
+                {% for message in messages %}
+                
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+
+                        <p id="message-timer" class="alert alert-success float-center text-center message-text">
+                            <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+                        </p>
+
+                    {% endif %}
+
+                {% endfor %}
+
+
                 {% block content%}
+
                 <!-- content goes in here -->
+
                 {% endblock %}
+
+
             </div>
         </div>
 
@@ -86,7 +102,7 @@
                 <p class="mb-0">&copy; 2024 Stylelink. All Rights Reserved.</p>
             </div>
         </footer>
-        </divr>
+        </div>
 
         <script src="{% static 'js/app.js' %}"></script>
 
