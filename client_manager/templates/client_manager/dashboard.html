@@ -38,7 +38,7 @@
                 <td> {{client.notes}} </td>
                 <td> {{client.price}} </td>
                 <td> {{client.creation_date}} </td>
-                <td> view </td>
+                <td><a href=" {% url 'client' client.id %} ">view client</a></td>
             </tr>
 
             {% endfor %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="car">
+        <strong> {{client.name}} </strong>
+        <div class="card-body">
+            <p><strong>ID: </strong> {{ client.id }} </p>
+            <p><strong>Email: </strong> {{ client.email }} </p>
+            <p><strong>Phone number: </strong> {{ client.phone }} </p>
+            <p><strong>Location: </strong> {{ client.location }} </p>
+            <p><strong>Formula: </strong> {{ client.formula }} </p>
+            <p><strong>Notes: </strong> {{ client.notes }} </p>
+            <p><strong>Price: </strong> {{ client.price }} </p>
+            <p><strong>Creation date: </strong> {{ client.creation_date }} </p>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
