@@ -7,6 +7,7 @@
     <div class="container bg-dark p-3 p-md-5 my-2 form-layout">
         <h3>Add client</h3>
         <h6>Start adding in the required details for your client</h6>
+        
         <hr>
 
         <form method="POST" autocomplete="off">
@@ -26,11 +27,15 @@
             {{form.notes|as_crispy_field}}
             <br>
             {{form.price|as_crispy_field}}
+
             <br>
             <br>
+
             <a href="{% url 'dashboard' %}"  class="btn btn-secondary w-100 btn-block p-2">Cancel</a>
+            
             <br>
             <br>
+            
             <button type="submit" class="btn btn-primary w-100 btn-block p-2">Add Client</button>
 
         </form>
