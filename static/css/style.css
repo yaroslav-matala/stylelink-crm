@@ -42,3 +42,7 @@ html, body {
 .message-text {
   color: white;
 }
+
+.clickable-row {
+  cursor: pointer;
+}
