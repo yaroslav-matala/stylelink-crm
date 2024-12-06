@@ -24,7 +24,7 @@
                     <td> {{client.name}} </td>
                     <td> {{client.phone}} </td>
                     <td> {{client.location}} </td>
-                    <td><a href="{% url 'client' client.id %}" class="btn btn-secondary btn-sm">OPEN <i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                    <td><a href="{% url 'client' client.id %}" class="btn btn-light btn-sm">OPEN <i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
                 </tr>
                 {% endfor %}
                 {% endif %}
