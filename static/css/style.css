@@ -16,3 +16,17 @@ hr {
   border-radius: 15px;
 }
 
+html, body {
+  height: 100%; /* Ensure the body takes full height */
+  margin: 0; /* Remove default margin */
+}
+
+.wrapper {
+  min-height: 100%; /* Ensure the wrapper takes up at least the full viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* Push the footer to the bottom */
+}
