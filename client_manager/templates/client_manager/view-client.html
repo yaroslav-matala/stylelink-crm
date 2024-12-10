@@ -6,20 +6,22 @@
     <div class="card text-white bg-dark mb-3">
         <div class="card-header fs-4"><i class="fa-solid fa-user"></i> &nbsp; {{client.name}}</div>
         <div class="card-body">
-            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">ID: </span> &nbsp; <span class="fw-bold">{{ client.id }}</span> </p>
-            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Email: </span> &nbsp;  <span class="fw-bold">{{ client.email }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">email </span> &nbsp;<br>  <span class="fw-bold">{{ client.email }}</span> </p>
             <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Phone: </span> &nbsp;  <span class="fw-bold">{{ client.phone }}</span> </p>
             <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Location: </span> &nbsp;  <span class="fw-bold">{{ client.location }}</span> </p>
             <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Formula: </span> &nbsp;  <span class="fw-bold">{{ client.formula }}</span> </p>
             <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Notes: </span> &nbsp;  <span class="fw-bold">{{ client.notes }}</span> </p>
             <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Price: </span> &nbsp;  <span class="fw-bold">{{ client.price }}</span> </p>
             <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">Creation date: </span> &nbsp;  <span class="fw-bold">{{ client.creation_date }}</span> </p>
+            <p class="fs-5 card-text"><span class="fw-light fs-5 text-muted">ID: </span> &nbsp; <span class="fw-bold">{{ client.id }}</span> </p>
         </div>
+
+
     </div>
 
     <a href="{% url 'dashboard' %}" class="btn btn-primary">Dashboard <i class="fa-solid fa-home"></i></a>
     &nbsp;
-    <a href="{% url 'update-client' client.id %}" class="btn btn-warning">Edit Client <i class="fa-solid fa-edit"></i></a>
+    <a href="{% url 'update-client' client.id %}" class="btn btn-info">Edit Client <i class="fa-solid fa-edit"></i></a>
     &nbsp;
     <a href="{% url 'delete-client' client.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this client?')">Delete Client <i class="fa-solid fa-trash"></i></a>
    

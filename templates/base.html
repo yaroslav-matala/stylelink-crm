@@ -14,7 +14,8 @@
     <title>Stylelink - Simple Client Manager</title>
 
     <!-- bootstrap bootswatch morph theme -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap-quartz.css'%}">
+    <link rel="stylesheet" href="https://bootswatch.com/5/superhero/bootstrap.min.css">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/bootstrap-quartz.css'%}"> {% endcomment %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
@@ -30,7 +31,7 @@
             <!-- navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container">
-                    <a class="navbar-brand fw-bolder fs-2 text-primary " href="{% url 'home' %}"><span class="thin">stylelink</span></a>
+                    <a class="navbar-brand fw-bolder fs-2 text-primary " href="{% if user.is_authenticated %}{% url 'dashboard' %}{% else %}{% url 'home' %}{% endif %}"><span class="thin">stylelink</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -42,30 +43,37 @@
                                 <a class="nav-link fw-bold fs-4 {% if request.path == '/dashboard' %}active{% endif %}"
                                     aria-current="page" href="{% url 'dashboard' %}"><i class="fa-solid fa-home"></i>&nbsp;&nbsp;Dashboard</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold fs-4 {% if request.path == logout_url %}active{% endif %}"
-                                    aria-current="page" href="{% url 'account_logout' %}"><i
-                                        class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Logout</a>
-                            </li>
                             {% else %}
                             <li class="nav-item">
                                 <a class="nav-link fw-bold fs-4 {% if request.path == signup_url %}active{% endif %}"
                                     aria-current="page" href="{% url 'account_signup' %}"><i
                                         class="fa-solid fa-user-plus"></i>&nbsp;Register</a>
                             </li>
+                            {% endif %}
+                        </ul>
+                        {% if user.is_authenticated %}
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold fs-4 {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">
+                                    <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Logout
+                                </a>
+                            </li>
+                        </ul>
+                        {% else %}
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link fw-bold fs-4 {% if request.path == login_url %}active{% endif %}"
                                     aria-current="page" href="{% url 'account_login' %}"><i
                                         class="fa-solid fa-right-from-bracket"></i>&nbsp;Login</a>
                             </li>
-                            {% endif %}
                         </ul>
-                        {% if user.is_authenticated %}
+                        {% endif %}
+                        <!-- {% if user.is_authenticated %}
                         <span class="navbar-text fs-6 text-body-tertiary fst-italic">You are logged in as <span
                                 class="text-muted fw-bold"> {{ user }} </span></span>
                         {% else %}
                         <span class="navbar-text fs-6 text-body-tertiary">You are not logged in</span>
-                        {% endif %}
+                        {% endif %} -->
                     </div>
                 </div>
             </nav>

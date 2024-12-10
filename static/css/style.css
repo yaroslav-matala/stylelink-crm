@@ -36,7 +36,7 @@ html, body {
 }
 
 .btn-slink-add {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .message-text {
@@ -45,4 +45,16 @@ html, body {
 
 .clickable-row {
   cursor: pointer;
+}
+
+#search-group {
+  height: 3rem;
+}
+
+#dashborad-title {
+  margin-bottom: revert !important;
+}
+
+#search-button {
+  width: 18%;
 }
