@@ -22,7 +22,7 @@ hr {
 }
 
 .form-layout {
-  max-width: 700px;
+  max-width: 550px;
   border-radius: 15px;
 }
 
@@ -71,4 +71,67 @@ html, body {
 
 #stylelink-header {
   font-size: 4rem;
+}
+
+#stylelink-header-mobile {
+  font-size: 3rem;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  padding-bottom: 10px; /* Avoid overlapping with a scrollbar */
+  white-space: nowrap; /* Prevent line wrapping */
+  margin: 0 -15px; /* Match Bootstrap container padding to keep it aligned */
+}
+
+.testimonials-wrapper::-webkit-scrollbar {
+  height: 8px; /* Show horizontal scrollbar */
+}
+
+.testimonials-wrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+body {
+  overflow-x: hidden; /* Disable horizontal scrolling for the entire page */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.testimonials-wrapper::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.testimonials-wrapper {
+  scrollbar-width: none; /* Disable scrollbar visibility */
+}
+
+#testimonials {
+  scroll-padding-left: 150px; /* Adjust this to determine the offset */
+  scroll-padding-right: 0; 
+}
+
+#div_id_login, #div_id_password, #div_id_remember, #div_id_username, #div_id_password1, #div_id_password2, #div_id_email {
+  margin-bottom: 1rem;
+}
+
+#hint_id_password1 ul{
+  margin-top: 1rem;
+}
+
+#div_id_formula textarea, #div_id_notes textarea  {
+  height: 100px !important;
+}
+
+#client-form #div_id_email {
+  margin-bottom: 0;
+}
+
+#view-client-wrapper {
+  max-width: 550px;
+  margin: auto;
 }
