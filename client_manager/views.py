@@ -14,9 +14,11 @@ from django.contrib import messages
 
 # Create your views here.
 
+
 # - Homepage
 def home(request):
     return render(request, 'client_manager/index.html')
+
 
 # - Dashboard
 @login_required(login_url='accounts/login')
@@ -30,9 +32,9 @@ def dashboard(request):
         my_clients = my_clients.filter(name__icontains=search_query)
 
     # Add pagination
-    paginator = Paginator(my_clients, 7) 
-    page_number = request.GET.get('page') 
-    page_obj = paginator.get_page(page_number) 
+    paginator = Paginator(my_clients, 7)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
         'page_obj': page_obj,
@@ -51,17 +53,18 @@ def add_client(request):
     if request.method == "POST":
         form = AddClientForm(request.POST)
         if form.is_valid():
-            client = form.save(commit=False)  
-            client.user = request.user      
-            client.save() 
+            client = form.save(commit=False)
+            client.user = request.user
+            client.save()
 
             messages.success(request, "New client was added")
 
             return redirect('dashboard')
-    
+
     context = {'form': form}
 
     return render(request, 'client_manager/add-client.html', context)
+
 
 # - Updaate a client
 @login_required(login_url='accounts/login')
@@ -82,20 +85,21 @@ def update_client(request, pk):
 
             return redirect('dashboard')
 
-    context = {'form': form, 'client': client} 
-    
+    context = {'form': form, 'client': client}
+
     return render(request, 'client_manager/update-client.html', context)
 
-# - Read a singular client
 
+# - Read a singular client
 @login_required(login_url='accounts/login')
 def view_client(request, pk):
-    
+
     all_clients = Client.objects.get(id=pk)
 
-    context = {'client':all_records}
+    context = {'client': all_records}
 
     return render(request, 'client_manager/view-client.html', context)
+
 
 @login_required(login_url='accounts/login')
 def singular_client(request, pk):
@@ -105,13 +109,13 @@ def singular_client(request, pk):
 
         context = {'client': client}
         return render(request, 'client_manager/view-client.html', context)
-    
+
     except Client.DoesNotExist:
         # If the client does not exist or doesn't belong to the logged-in user
         return redirect('dashboard')
 
-# - Delete a record
 
+# - Delete a record
 @login_required(login_url='accounts/login')
 def delete_client(request, pk):
 
