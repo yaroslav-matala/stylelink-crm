@@ -40,7 +40,7 @@
 
     <div class="row d-md-none">
         <div class="col-12">
-            <a href="{% url 'account_signup' %}" type="button" class="btn btn-primary">create your account</a>
+            <a href="{% url 'account_signup' %}" type="button" class="btn btn-lg btn-primary">create your account</a>
         </div>
     </div>
 
@@ -48,7 +48,7 @@
 
     <div class="row text-center d-none d-md-block">
         <div class="col-12">
-            <h1 id="stylelink-header">
+            <h2 id="stylelink-header">
                 Style is your craft.<br>
                 <span class="text-primary">Simplify it</span> with Stylelink.
             </h1>
@@ -64,14 +64,28 @@
 
     <div class="row text-center d-none d-md-block">
         <div class="col-12">
-            <a href="{% url 'account_signup' %}" type="button" class="btn btn-primary">create your account</a>
+            <a href="{% url 'account_signup' %}" type="button" class="btn btn-primary btn-lg">create your account</a>
         </div>
     </div>
 
-    <div class="row d-none d-md-block text-center">
+    
+
+    <br>
+    <div class="image-container container">
+        <img src="{% static 'images/dashb2.png' %}" alt="Image" class="image" style="width: 100%">
+        <div class="overlay"></div>
+        <div class="content-image">
+            <h2></h2>
+            <p class="fs-4"></p>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- <div class="row d-none d-md-block text-center">
         <div class="col-12">
             <br>
-            <img src="{% static 'images/dashboard.png' %}" alt="">
+            <img src="{% static 'images/12.jpg' %}" alt="">
             <br>
             <br>
         </div>
@@ -84,9 +98,9 @@
             <br>
             <br>
         </div>
-    </div>
+    </div> -->
 
-    <div class="row text-center">
+    <!-- <div class="row text-center">
         <div class="col-md-2 col-4 mt-2">
             <img class="mr-2" src="https://placehold.co/150x100" alt="">
         </div>
@@ -107,77 +121,129 @@
             <br>
             <br>
         </div>
-    </div>
-    <br>
-    <br>
-    
-    <div class="wrapper align-items-center justify-content-center">
-        <div class="row">
-            <div class="col-auto">
-                <img src="https://placehold.co/40x40" alt="">
-            </div>
-            <div class="col-auto">
-                <p class="mb-0">some text</p>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-auto">
-                <img src="https://placehold.co/40x40" alt="">
-            </div>
-            <div class="col-auto">
-                <p class="mb-0">some text</p>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-auto">
-                <img src="https://placehold.co/40x40" alt="">
-            </div>
-            <div class="col-auto">
-                <p class="mb-0">some text</p>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-auto">
-                <img src="https://placehold.co/40x40" alt="">
-            </div>
-            <div class="col-auto">
-                <p class="mb-0">some text</p>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
+    </div> -->
 
-    <h2>Lorem ipsum, dolor sit amet consectetur dolor sit amet consectetur <span class="text-primary">adipisicing elit</span></h2>
-    <br>
-    <br>
-    <div class="row text-center">
-        <div class="col-12">
-            <h2>header</h2>
-            <p>text</p>
-            <img src="https://placehold.co/300x150" alt="">
-        </div>
-        <div class="col-12">
-            <h2>header</h2>
-            <p>text</p>
-            <img src="https://placehold.co/300x150" alt="">
-        </div>
-        <div class="col-12">
-            <h2>header</h2>
-            <p>text</p>
-            <img src="https://placehold.co/300x150" alt="">
+    <div class="container my-5">
+        <div class="row">
+            <!-- Benefit 1 -->
+            <div class="col-md-6 d-flex align-items-center mb-4">
+                <i class="fa-solid fa-people-group fa-2xl me-3"></i>
+                <div>
+                    <h5 class="fw-bold">Organized Client Records</h5>
+                    <p class="mb-0">Track client preferences and history effortlessly.</p>
+                </div>
+            </div>
+            <!-- Benefit 2 -->
+            <div class="col-md-6 d-flex align-items-center mb-4">
+                <i class="fa-solid fa-forward fa-2xl me-3"></i>
+                <div>
+                    <h5 class="fw-bold">Time-Saving Tools</h5>
+                    <p class="mb-0">Spend less time managing data and more time with clients.</p>
+                </div>
+            </div>
+            <!-- Benefit 3 -->
+            <div class="col-md-6 d-flex align-items-center mb-4">
+                <i class="fa-solid fa-unlock-alt fa-2xl me-3"></i>
+                <div>
+                    <h5 class="fw-bold">Free and Accessible</h5>
+                    <p class="mb-0">Get started now for free—no hidden fees.</p>
+                </div>
+            </div>
+            <!-- Benefit 4 -->
+            <div class="col-md-6 d-flex align-items-center mb-4">
+                <i class="fa-regular fa-file-lines fa-2xl me-3"></i>
+                <div>
+                    <h5 class="fw-bold">Secure Data Management</h5>
+                    <p class="mb-0">Keep your client records safe with reliable storage.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="row text-center">
-        <div class="col-12">
-            <h2>another header</h2>
-            <p>anither descritption</p>
-            <a href="#" class="btn btn-primary">start for free</a>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <h2>
+                    Lorem ipsum, dolor sit amet amet amet consectetur dolor
+                    sit amet adipisicing elit
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </div>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md-12 text-center">
+                <a href="{% url 'account_signup' %}" class="btn btn-lg btn-primary">Start for Free</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- feature 1 -->
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12">
+                <div class="image-container">
+                    <img src="{% static 'images/3.jpg' %}" alt="Feature Image" class="img-fluid rounded shadow">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <h3 class="fw-bold my-3">Streamline Your Workflow</h3>
+                <p class="text-muted">
+                    Easily add clients, manage their details, and keep track of preferences.
+                    Save time and focus on building relationships with features designed for simplicity and efficiency.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Easy client management</li>
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Simple and efficient</li>
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Accessible on any device</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <!-- feature 2 -->
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12">
+                <div class="image-container">
+                    <img src="{% static 'images/21.jpg' %}" alt="Formula Feature Image" class="img-fluid rounded shadow">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <h3 class="fw-bold my-3">Formula Management</h3>
+                <p class="text-muted">
+                    Organize and store important formulas related to client services. Whether it’s hair color formulas or treatment plans, you can quickly reference and apply them for consistency and accuracy.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Store and organize formulas</li>
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Easily access formulas for every client</li>
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Ensure accuracy and consistency in services</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <!-- feature 3 -->
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12">
+                <div class="image-container">
+                    <img src="{% static 'images/22.jpg' %}" alt="Notes Feature Image" class="img-fluid rounded shadow">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <h3 class="fw-bold mb-3">Client Notes</h3>
+                <p class="text-muted">
+                    Keep track of essential details about each client. Add notes about preferences, past conversations, or any special requests to offer a more personalized service.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Record client preferences and details</li>
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Quick access to notes during sessions</li>
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Improve client relationships with personalized interactions</li>
+                </ul>
+            </div>
+        </div>
+
+        
     </div>
     
     <div class="container mt-5 mb-3">
@@ -189,13 +255,13 @@
                     </div>
                     <div class="card-body">
                         <h2 class="display-5 fw-bold text-primary">€0</h2>
-                        <p class="text-muted mb-4">Temporarily Free</p>
-                        <a href="#" class="btn btn-primary btn-lg mb-4">Start Now</a>
+                        <p class="text-muted mb-4">Forever Free</p>
+                        <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg mb-4">Start Now</a>
                         <ul class="list-unstyled">
-                            <li><i class="fa-solid fa-check text-success me-2"></i>Bla bla feature 1</li>
-                            <li><i class="fa-solid fa-check text-success me-2"></i>Bla bla feature 2</li>
-                            <li><i class="fa-solid fa-check text-success me-2"></i>Bla bla feature 3</li>
-                            <li><i class="fa-solid fa-check text-success me-2"></i>Bla bla feature 4</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Bla bla feature 1</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Bla bla feature 2</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Bla bla feature 3</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Bla bla feature 4</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-light">
@@ -206,7 +272,14 @@
         </div>
     </div>
 
-    <div class="container py-5">
+    <div class="row text-center pt-5 pb-3">
+        <div class="col-12">
+            <h2>Join hundreds of happy <span class="text-primary">Stylelink</span> users</h2>
+            <p>Seamless simplicity inspired 85% of our users to choose StyleLink for managing their client records effortlessly.</p>
+        </div>
+    </div>
+
+    <div class="container pb-5">
         <div class="testimonials-wrapper d-flex overflow-auto" id="testimonials">
             <div class="testimonial card mx-2 flex-shrink-0" style="width: 250px;">
                 <div class="card-body">
@@ -275,6 +348,12 @@
                 </div>
             </div>
             <!-- Add more testimonials as needed -->
+        </div>
+    </div>
+
+    <div class="row text-center mb-5">
+        <div class="col-12">
+            <a href="{% url 'account_signup' %}" class="btn btn-lg btn-primary">Take Control of Your Business Today</a>
         </div>
     </div>
 

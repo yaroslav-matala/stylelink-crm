@@ -30,7 +30,7 @@ def dashboard(request):
         my_clients = my_clients.filter(name__icontains=search_query)
 
     # Add pagination
-    paginator = Paginator(my_clients, 5) 
+    paginator = Paginator(my_clients, 7) 
     page_number = request.GET.get('page') 
     page_obj = paginator.get_page(page_number) 
 
