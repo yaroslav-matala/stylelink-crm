@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.onload = function () {
     const testimonials = document.getElementById("testimonials");
-    testimonials.scrollLeft = 100; // Adjust the value to set the offset
+    testimonials.scrollLeft = 0; // Adjust the value to set the offset
 };

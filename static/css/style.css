@@ -174,3 +174,8 @@ body {
 .benefits-container {
   min-width: 850px;
 }
+
+#testimonials .testimonial {
+  height: 150px;
+  padding: 1rem;
+}
