@@ -52,10 +52,10 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
    - Add, edit, and delete client records.
 3. **Responsive Design**  
    - Fully functional across all screen sizes, built using Bootstrap's Superhero theme from Bootswatch.
-4. **Search Functionality**  
-   - Search for clients by name for quick access.
-5. **Dashboard** 
+4. **Dashboard** 
    - The dashboard displays a list of clients with pagination, search functionality, and client details such as name, phone, location, and associated user.
+5. **Search Functionality**  
+   - Search for clients by name for quick access.
 6. **Pagination**  
    - Ensures smooth navigation even with large data sets.
 7. **Theme Switcher** 
@@ -74,23 +74,8 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
 
 The application uses a relational database to store client information. The database is built using **PostgreSQL** and consists of the following tables:
 
-#### Client Model
-
-The `Client` table stores all relevant client data for the user. The table contains the following fields:
-
-- **id**: Primary key, auto-incremented integer identifier for each client record.
-- **user**: Foreign key linking to the `User` model, establishing the relationship that each client belongs to a specific user.
-- **name**: A string field to store the client's name.
-- **phone**: A string field to store the client's phone number. (optional)
-- **email**: An optional string field to store the client's email address. (optional)
-- **location**: A string field to store the client's location. (optional)
-- **formula**: A text field where formula-related notes can be stored (optional).
-- **notes**: A text field for additional notes or comments about the client (optional).
-- **price**: A decimal field used to store the price associated with the client (optional).
-- **created_at**: A datetime field to store when the client was created.
-- **updated_at**: A datetime field to store when the client record was last updated.
-
 # Entity Relationship Diagram (ERD)
+![Entity Relationship Diagram][]
 
 ## User Table
 | Field         | Type      | Description                       |
@@ -297,6 +282,22 @@ This project utilizes the following technologies:
 - **Heroku**: A platform-as-a-service (PaaS) that is used to deploy and run the web application.
 - **Git**: Version control for source code management.
 - **GitHub**: A platform for hosting and collaborating on code, used to store the project repository.
+
+---
+
+## Known Bugs
+
+### Issue with Allauth Signup Page
+
+- **Description**: The password hint section in the Allauth signup page includes an `<ul>` tag nested inside a `<small>` tag. This structure does not pass HTML validation, as the `<ul>` element is not allowed as a child of the `<small>` element.
+  
+- **Impact**: While this does not break the functionality of the signup page, it does result in HTML validation errors.
+
+- **Potential Solution**: A possible fix would involve overriding the Allauth signup template and adjusting the structure to ensure the `<ul>` tag is placed outside of the `<small>` tag or replaced with a semantically valid alternative.
+
+- **Status**: This issue is currently under review and will be addressed in a future update.
+
+If you encounter this bug, feel free to open an issue or suggest a solution in the repository.
 
 ---
 

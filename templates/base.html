@@ -113,7 +113,7 @@
             </div>
             
             <!-- theme swticher -->
-            <div class="d-flex justify-content-center mt-3">
+            <div class="d-flex justify-content-center my-3">
                 <form method="POST" action="{% url 'switch_theme' %}" class="form-inline">
                     {% csrf_token %}
                     <select name="theme" onchange="this.form.submit()">
