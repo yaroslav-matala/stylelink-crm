@@ -85,7 +85,7 @@ MIDDLEWARE = [
 
 # settings.py
 BOOTSWATCH_THEMES = [
-    'cerulean', 'cosmo', 'cyborg', 'darkly', 'flatly', 'journal',
+    'darkly', 'flatly', 'journal',
     'litera', 'lumen', 'lux', 'materia', 'minty', 'morph',
     'pulse', 'quartz', 'sandstone', 'simplex', 'sketchy',
     'slate', 'solar', 'spacelab', 'superhero', 'united', 'yeti'
