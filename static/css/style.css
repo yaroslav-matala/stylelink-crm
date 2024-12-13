@@ -1,13 +1,16 @@
+/* UNIVERSAL STYLES */
+
+html, body {
+  height: 100%;
+  margin: 0; 
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
   font-family: 'Inter', sans-serif;
-}
-
-.wrapper {
-  flex: 1;
+  overflow-x: hidden; /* Disable horizontal scrolling for the entire page */
 }
 
 hr {
@@ -15,69 +18,46 @@ hr {
   border-bottom: 1px ridge;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.form-layout {
-  max-width: 550px;
-  border-radius: 15px;
-}
-
-html, body {
-  height: 100%; /* Ensure the body takes full height */
-  margin: 0; /* Remove default margin */
-}
-
 .wrapper {
-  min-height: 100%; /* Ensure the wrapper takes up at least the full viewport */
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 100%; /* Ensure the wrapper takes up at least the full viewport */
 }
 
 .content {
   flex: 1; /* Push the footer to the bottom */
 }
 
-.footer-hr {
-  margin: 1rem 0;
+/* CLASS STYLES */
+
+/* Forms and Buttons */
+.form-layout {
+  max-width: 550px;
+  border-radius: 15px;
 }
 
 .btn-slink-add {
   margin-bottom: 1rem;
 }
 
+.btn-xl {
+  padding: 1.25rem 2rem; /* Adjust padding for larger size */
+  font-size: 1.5rem;     /* Increase font size */
+  border-radius: 0.5rem; /* Optional: Adjust border radius */
+}
+
+/* Messages and Alerts */
 .message-text {
   color: white;
 }
 
+/* Clickable Rows */
 .clickable-row {
   cursor: pointer;
 }
 
-#search-group {
-  height: 3rem;
-}
-
-#dashborad-title {
-  margin-bottom: revert !important;
-}
-
-#search-button {
-  width: 18%;
-}
-
-#stylelink-header {
-  font-size: 4rem;
-}
-
-#stylelink-header-mobile {
-  font-size: 3rem;
-}
-
+/* Testimonials Section */
 .testimonials-wrapper {
   display: flex;
   overflow-x: auto; /* Enable horizontal scrolling */
@@ -89,59 +69,19 @@ html, body {
 }
 
 .testimonials-wrapper::-webkit-scrollbar {
-  height: 8px; /* Show horizontal scrollbar */
-}
-
-.testimonials-wrapper::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-
-body {
-  overflow-x: hidden; /* Disable horizontal scrolling for the entire page */
-}
-
-/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
-.testimonials-wrapper::-webkit-scrollbar {
   display: none; /* Hide the scrollbar */
 }
 
-/* Hide scrollbar for Firefox */
 .testimonials-wrapper {
-  scrollbar-width: none; /* Disable scrollbar visibility */
+  scrollbar-width: none; /* Disable scrollbar visibility for Firefox */
 }
 
-#testimonials {
-  scroll-padding-left: 150px; /* Adjust this to determine the offset */
-  scroll-padding-right: 0; 
+#testimonials .testimonial {
+  height: 150px;
+  padding: 1rem;
 }
 
-#div_id_login, #div_id_password, #div_id_remember, #div_id_username, #div_id_password1, #div_id_password2, #div_id_email {
-  margin-bottom: 1rem;
-}
-
-#hint_id_password1 ul{
-  margin-top: 1rem;
-}
-
-#div_id_formula textarea, #div_id_notes textarea  {
-  height: 100px !important;
-}
-
-#client-form #div_id_email {
-  margin-bottom: 0;
-}
-
-#view-client-wrapper {
-  max-width: 550px;
-  margin: auto;
-}
-
-#login_form, #signup_form {
-  border: 1px solid;
-  padding: 2rem;
-}
-
+/* Images and Overlays */
 .image-container {
   position: relative;
   display: inline-block;
@@ -172,25 +112,88 @@ body {
   text-align: center;
 }
 
+/* BENEFITS SECTION */
 .benefits-container {
   min-width: 850px;
-}
-
-#testimonials .testimonial {
-  height: 150px;
-  padding: 1rem;
-}
-
-.btn-xl {
-  padding: 1.25rem 2rem; /* Adjust padding for larger size */
-  font-size: 1.5rem;     /* Increase font size */
-  border-radius: 0.5rem; /* Optional: Adjust border radius */
 }
 
 .benefit-icon-wrapper {
   min-width: 70px;
 }
 
+/* ID STYLES */
+
+/* Headers */
+#stylelink-header {
+  font-size: 4rem;
+}
+
+#stylelink-header-mobile {
+  font-size: 3rem;
+}
+
+/* Forms */
+#div_id_login, 
+#div_id_password, 
+#div_id_remember, 
+#div_id_username, 
+#div_id_password1, 
+#div_id_password2, 
+#div_id_email {
+  margin-bottom: 1rem;
+}
+
+#hint_id_password1 ul {
+  margin-top: 1rem;
+}
+
+#div_id_formula textarea, 
+#div_id_notes textarea {
+  height: 100px !important;
+}
+
+#client-form #div_id_email {
+  margin-bottom: 0;
+}
+
+/* Login and Signup Forms */
+#login_form, 
+#signup_form {
+  border: 1px solid;
+  padding: 2rem;
+}
+
+/* Dashboard and Search */
+#dashborad-title {
+  margin-bottom: revert !important;
+}
+
+#search-group {
+  height: 3rem;
+}
+
+#search-button {
+  width: 18%;
+}
+
+/* View Client */
+#view-client-wrapper {
+  max-width: 550px;
+  margin: auto;
+}
+
+/* Footer */
+.footer-hr {
+  margin: 1rem 0;
+}
+
+/* Header Image */
 #header-image {
   width: 100%;
+}
+
+/* Testimonials Section */
+#testimonials {
+  scroll-padding-left: 150px; /* Adjust this to determine the offset */
+  scroll-padding-right: 0; 
 }
