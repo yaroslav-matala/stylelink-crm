@@ -77,9 +77,12 @@ The `Client` table stores all relevant client data for the user. The table conta
 - **id**: Primary key, auto-incremented integer identifier for each client record.
 - **user**: Foreign key linking to the `User` model, establishing the relationship that each client belongs to a specific user.
 - **name**: A string field to store the client's name.
-- **phone**: A string field to store the client's phone number.
-- **location**: A string field to store the client's location.
-- **email**: An optional string field to store the client's email address.
+- **phone**: A string field to store the client's phone number. (optional)
+- **email**: An optional string field to store the client's email address. (optional)
+- **location**: A string field to store the client's location. (optional)
+- **formula**: A text field where formula-related notes can be stored (optional).
+- **notes**: A text field for additional notes or comments about the client (optional).
+- **price**: A decimal field used to store the price associated with the client (optional).
 - **created_at**: A datetime field to store when the client was created.
 - **updated_at**: A datetime field to store when the client record was last updated.
 
@@ -100,11 +103,14 @@ The `Client` table stores all relevant client data for the user. The table conta
 | `id`          | Primary Key (PK) | Auto-generated unique identifier        |
 | `user`        | Foreign Key (FK) | References `User` table (One-to-Many)    |
 | `name`        | String    | Name of the client                       |
-| `phone`       | String    | Phone number of the client               |
-| `location`    | String    | Location of the client                   |
+| `phone`       | String    | Phone number of the client (optional)    |
 | `email`       | String    | Email of the client (optional)           |
-| `created_at`  | DateTime | Date the client was created              |
-| `updated_at`  | DateTime | Date the client was last updated         |
+| `location`    | String    | Location of the client (optional)        |
+| `formula`     | Text      | Formula stored here (optional)           |
+| `notes`       | Text      | Additional notes or comments (optional)  |
+| `price`       | Decimal   | Price associated with client (optional)  |
+| `created_at`  | DateTime  | Date the client was created              |
+| `updated_at`  | DateTime  | Date the client was last updated         |
 
 ## Relationship:
 - **One-to-Many**: A `User` can have many `Clients`, but each `Client` is associated with exactly one `User`.
