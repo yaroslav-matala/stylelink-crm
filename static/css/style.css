@@ -191,3 +191,6 @@ body {
   min-width: 70px;
 }
 
+#header-image {
+  width: 100%;
+}
