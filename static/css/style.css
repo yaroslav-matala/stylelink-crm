@@ -143,13 +143,13 @@ hr {
   margin-bottom: 1rem;
 }
 
-#client-form #div_id_name,
-#client-form #div_id_phone,
-#client-form #div_id_email,
-#client-form #div_id_location,
-#client-form #div_id_formula,
-#client-form #div_id_notes,
-#client-form #div_id_price {
+#client-form #div_id_name label,
+#client-form #div_id_phone label,
+#client-form #div_id_email label,
+#client-form #div_id_location label,
+#client-form #div_id_formula label,
+#client-form #div_id_notes label,
+#client-form #div_id_price label {
   font-size: 2rem;
 }
 
