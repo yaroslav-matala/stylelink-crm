@@ -2,13 +2,29 @@
 
 ![Am I Responsive Design](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/amiresponsive.png)
 
+### Overview
+
+This project is a client management web application built with Django. It allows users to add, view, update, and delete client information in a secure and organized manner. The app includes a dashboard where users can manage their clients, search through records, and paginate results. The project is designed to be intuitive and user-friendly, with a focus on accessibility and responsive design. It incorporates authentication, ensuring that only authorized users can access their own data.
+
+The app will be deployed on Heroku, making it accessible to users from anywhere. Future updates include the addition of a walkthrough guide for new users, as well as additional features to improve usability.
+
+### Site User and Goal
+
+- **Target Users**:  
+  The primary users of this site are individuals or businesses that need to manage client information, such as small business owners, consultants, and freelancers. The system is designed to be simple enough for non-technical users while providing powerful features for managing client records.
+
+- **Goal**:  
+  The goal of this project is to provide a straightforward, secure, and efficient way for users to manage their clients' information. It aims to streamline the process of adding, updating, and deleting client records while ensuring data privacy and security. Additionally, the application will evolve to include a user-friendly walkthrough guide to assist users in navigating the platform with ease.
+
 ## Table of Contents
 1. [User Experience Design](#user-experience-design)
 2. [Features](#features)
-3. [Agile Development](#agile-development)
-4. [Testing](#testing)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
+3. [Database planning](#database-planning)
+4. [Agile Development](#agile-development)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Future Features](#future-features)
+8. [Credits](#credits)
 
 ---
 
@@ -48,6 +64,40 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
 ![Add Client Screenshot](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/add-client.png)  
 
 ---
+
+## Database Planning
+
+The application uses a relational database to store client information. The database is built using **PostgreSQL** and consists of the following tables:
+
+#### Client Model
+
+The `Client` table stores all relevant client data for the user. The table contains the following fields:
+
+- **id**: Primary key, auto-incremented integer identifier for each client record.
+- **user**: Foreign key linking to the `User` model, establishing the relationship that each client belongs to a specific user.
+- **name**: A string field to store the client's name.
+- **phone**: A string field to store the client's phone number.
+- **location**: A string field to store the client's location.
+- **email**: An optional string field to store the client's email address.
+- **created_at**: A datetime field to store when the client was created.
+- **updated_at**: A datetime field to store when the client record was last updated.
+
+#### Database Relationships
+
+- **User-Client Relationship**: The `Client` model has a foreign key linking to the `User` model. This ensures that clients are associated with specific users, and users can only access and manage their own client data.
+  
+#### Indexing
+
+- **Client Name Index**: An index is applied to the `name` field for faster search and filtering of client names in the dashboard.
+
+#### Data Integrity
+
+- **Validation**: The application performs validation checks to ensure data integrity, such as ensuring that all required fields (name, phone, etc.) are provided when creating or updating client records.
+- **Cascade Deletion**: When a user is deleted from the system, all related client records will also be deleted to maintain referential integrity.
+
+#### Database Migration
+
+Django’s built-in migration system will be used to create and manage the database schema. This allows for easy version control of the database and ensures that changes to the models are automatically reflected in the database structure.
 
 ## Agile Development
 
@@ -187,6 +237,25 @@ The development process followed Agile methodologies. The [Project Board](https:
 For live deployment, the project is hosted on **Heroku** at: [Live Site.](https://stylelink-7c53adcbe9a8.herokuapp.com/)
 
 ---
+
+### Future Features
+
+- **Help Button with Walkthrough Guide**  
+  A "Help" button will be added to the dashboard page. When clicked, it will activate a step-by-step walkthrough guide on the screen to help users navigate through the features of the app. This guide will highlight key areas of the dashboard, such as adding clients, searching, and pagination, providing useful instructions for new users and those needing assistance.
+
+### Technology Stack
+
+This project utilizes the following technologies:
+
+- **Django**: A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- **HTML5**: The latest version of the HTML standard for structuring web content.
+- **CSS3**: The latest version of the CSS standard for styling web pages.
+- **JavaScript**: A programming language used to make web pages interactive.
+- **Bootstrap**: A popular front-end framework for building responsive, mobile-first websites. This project uses the **Bootswatch Superhero** theme.
+- **PostgreSQL**: A powerful, open-source relational database management system used to store client data.
+- **Heroku**: A platform-as-a-service (PaaS) that is used to deploy and run the web application.
+- **Git**: Version control for source code management.
+- **GitHub**: A platform for hosting and collaborating on code, used to store the project repository.
 
 ## Credits
 
