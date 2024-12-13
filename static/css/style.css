@@ -143,6 +143,16 @@ hr {
   margin-bottom: 1rem;
 }
 
+#client-form #div_id_name,
+#client-form #div_id_phone,
+#client-form #div_id_email,
+#client-form #div_id_location,
+#client-form #div_id_formula,
+#client-form #div_id_notes,
+#client-form #div_id_price {
+  font-size: 2rem;
+}
+
 #hint_id_password1 ul {
   margin-top: 1rem;
 }
