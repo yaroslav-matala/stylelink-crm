@@ -34,10 +34,15 @@
             <tbody>
             {% if page_obj %}
                 {% for client in page_obj %}
-                <tr class="clickable-row" data-href="{% url 'client' client.id %}">
+                <tr class="clickable-row d-none d-md-block" data-href="{% url 'client' client.id %}">
                     <td class="fs-4 py-2">&nbsp;&nbsp;{{client.name}}</td>
                     <td class="fs-4 py-2">{{client.phone}}</td>
                     <td class="fs-4 py-2">{{client.location}}</td>
+                </tr>
+                <tr class="clickable-row d-md-none" data-href="{% url 'client' client.id %}">
+                    <td class="fs-5 py-2">&nbsp;&nbsp;{{client.name}}</td>
+                    <td class="fs-5 py-2">{{client.phone}}</td>
+                    <td class="fs-5 py-2">{{client.location}}</td>
                 </tr>
                 {% endfor %}
                 {% else %}
