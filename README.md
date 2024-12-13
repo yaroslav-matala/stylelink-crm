@@ -78,7 +78,7 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
 The application uses a relational database to store client information. The database is built using **PostgreSQL** and consists of the following tables:
 
 # Entity Relationship Diagram (ERD)
-![Entity Relationship Diagram][https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/stylelink-erd.png]
+![Entity Relationship Diagram](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/stylelink-erd.png)
 
 ## User Table
 | Field         | Type      | Description                       |
