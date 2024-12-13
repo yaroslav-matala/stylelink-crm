@@ -42,12 +42,10 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
 
 ### Screenshots
 #### Dashboard Page
-![Dashboard Screenshot](#)  
-*Screenshot showing the main dashboard with the client table.*
+![Dashboard Screenshot](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/dashboard.png)
 
 #### Add Client Page
-![Add Client Screenshot](#)  
-*Screenshot of the form used to add a new client.*
+![Add Client Screenshot](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/add-client.png)  
 
 ---
 
