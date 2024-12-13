@@ -67,10 +67,10 @@ The development process followed Agile methodologies. The [Project Board](https:
 
 ### Screenshots
 #### Successful Client Addition
-![Test Add Client Screenshot](#)  
+![Test Add Client Screenshot](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/client-added-successfully.png)  
 
 #### Mobile Responsiveness
-![Responsive Test Screenshot](#)  
+![Responsive Test Screenshot](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/dashboard-responsive.png)  
 
 ---
 
