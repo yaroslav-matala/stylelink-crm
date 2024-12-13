@@ -1,7 +1,6 @@
 # Stylelink - Simple Client Manager
 
-![Am I Responsive Design](#)  
-*Placeholder for Am I Responsive image showcasing the website's responsiveness across devices.*
+![Am I Responsive Design]()
 
 ## Table of Contents
 1. [User Experience Design](#user-experience-design)
