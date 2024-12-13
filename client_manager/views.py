@@ -10,16 +10,18 @@ from django.http import HttpResponseForbidden
 
 from .models import Client
 
-from django.contrib import messages
+from django.conf import settings
 
-# Create your views here.
+from django.contrib import messages
 
 
 # - Homepage
 def home(request):
     if request.user.is_authenticated:
-        return redirect('dashboard')  # Redirect authenticated users to the dashboard
-    return render(request, 'client_manager/index.html')  # Render the homepage for unauthenticated users
+        # Redirect authenticated users to the dashboard
+        return redirect('dashboard')
+        # Render the homepage for unauthenticated users
+    return render(request, 'client_manager/index.html')
 
 
 # - Dashboard
@@ -135,5 +137,18 @@ def delete_client(request, pk):
 def custom_404_view(request, exception):
     if not request.user.is_authenticated:
         return redirect('account_login')
-    
     return redirect('dashboard')
+
+
+# Theme swticher
+def switch_theme(request):
+    if request.method == 'POST':
+        theme = request.POST.get('theme')
+        if theme in settings.BOOTSWATCH_THEMES:
+            request.session['theme'] = theme
+            messages.success(
+                request, f"Theme switched to {theme.capitalize()}."
+                )
+        else:
+            messages.error(request, "Invalid theme selected.")
+    return redirect(request.META.get('HTTP_REFERER', '/'))

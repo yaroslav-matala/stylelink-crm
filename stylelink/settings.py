@@ -83,6 +83,14 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+# settings.py
+BOOTSWATCH_THEMES = [
+    'cerulean', 'cosmo', 'cyborg', 'darkly', 'flatly', 'journal',
+    'litera', 'lumen', 'lux', 'materia', 'minty', 'morph',
+    'pulse', 'quartz', 'sandstone', 'simplex', 'sketchy',
+    'slate', 'solar', 'spacelab', 'superhero', 'united', 'yeti'
+]
+
 ROOT_URLCONF = 'stylelink.urls'
 
 TEMPLATES = [
@@ -96,6 +104,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'client_manager.context_processors.context_processor',
             ],
         },
     },
