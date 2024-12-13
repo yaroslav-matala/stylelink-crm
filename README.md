@@ -115,7 +115,7 @@ For live deployment, the project is hosted on **Heroku** at: [Live Site.](#)
 ## Credits
 
 ### Tutorials and Code Resources
-- This project is heavily inspired by the tutorial: [Build a Django Client Manager](https://www.youtube.com/watch?v=pqWyUAT38e0) by Traversy Media.
+- This project is inspired by the tutorial: [Build a Django Client Manager](https://www.youtube.com/watch?v=pqWyUAT38e0) by Traversy Media.
 
 ### Images
 - Images used in the project were sourced from **[Pexels](https://www.pexels.com)** and **[Pixabay](https://pixabay.com)**.
