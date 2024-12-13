@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden; /* Disable horizontal scrolling for the entire page */
+  overflow-x: hidden;
 }
 
 hr {
@@ -42,9 +42,9 @@ hr {
 }
 
 .btn-xl {
-  padding: 1.25rem 2rem; /* Adjust padding for larger size */
-  font-size: 1.5rem;     /* Increase font size */
-  border-radius: 0.5rem; /* Optional: Adjust border radius */
+  padding: 1.25rem 2rem; 
+  font-size: 1.5rem;    
+  border-radius: 0.5rem;
 }
 
 /* Messages and Alerts */
@@ -61,7 +61,7 @@ hr {
 .testimonials-wrapper {
   display: flex;
   overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Prevent vertical scrolling */
+  overflow-y: hidden;
   scroll-behavior: smooth; /* Smooth scrolling */
   padding-bottom: 10px; /* Avoid overlapping with a scrollbar */
   white-space: nowrap; /* Prevent line wrapping */
@@ -194,6 +194,6 @@ hr {
 
 /* Testimonials Section */
 #testimonials {
-  scroll-padding-left: 150px; /* Adjust this to determine the offset */
+  scroll-padding-left: 150px; 
   scroll-padding-right: 0; 
 }

@@ -129,10 +129,9 @@ def delete_client(request, pk):
     return redirect('dashboard')
 
 
+# 404 redirect
 def custom_404_view(request, exception):
-    # Check if the user is authenticated
     if not request.user.is_authenticated:
-        return redirect('account_login')  # Replace 'account_login' with your login URL name
+        return redirect('account_login')
     
-    # If the user is authenticated, optionally display a 404 page
     return redirect('dashboard')
