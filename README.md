@@ -24,7 +24,8 @@ The app will be deployed on Heroku, making it accessible to users from anywhere.
 5. [Testing](#testing)
 6. [Deployment](#deployment)
 7. [Future Features](#future-features)
-8. [Credits](#credits)
+8. [Technology Stack](#technology-stack)
+9. [Credits](#credits)
 
 ---
 
@@ -81,6 +82,21 @@ The `Client` table stores all relevant client data for the user. The table conta
 - **email**: An optional string field to store the client's email address.
 - **created_at**: A datetime field to store when the client was created.
 - **updated_at**: A datetime field to store when the client record was last updated.
+
+### Entity Relationship Diagram
+
++------------------+           +--------------------+
+|      User        |           |       Client       |
++------------------+           +--------------------+
+| id (PK)          |           | id (PK)            |
+| username         |           | user (FK)          |
+| password         |           | name               |
+| email            |           | phone              |
+| date_joined      |           | location           |
++------------------+           | email              |
+                               | created_at         |
+                               | updated_at         |
+                               +--------------------+
 
 #### Database Relationships
 
