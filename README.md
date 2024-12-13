@@ -67,45 +67,89 @@ The development process followed Agile methodologies. The [Project Board](https:
 
 ### HOME PAGE
 
- Test                                      Result 
--------------------------------------------------
- Test description                         Pass   
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure the home page loads correctly without errors.    | Pass   |
+| Verify that unauthenticated users see the correct UI.   | Pass   |
+| Confirm redirection to the dashboard for logged-in users. | Pass   |
 
-### ABOUT PAGE
+### DASHBOARD PAGE
 
- Test                                      Result 
--------------------------------------------------
- Test description                         Pass   
+| Test Description                                         | Result |
+|----------------------------------------------------------|--------|
+| Ensure the dashboard page loads correctly for logged-in users. | Pass   |
+| Verify pagination works as expected.                    | Pass   |
+| Test search functionality filters results accurately.   | Pass   |
+| Confirm unauthorized access redirects to the login page. | Pass   |
 
-### PROFILE PAGE
+### ADD CLIENT PAGE
 
- Test                                      Result 
--------------------------------------------------
- Test description                         Pass   
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure the add client form renders correctly.           | Pass   |
+| Verify a valid form submission saves the client.        | Pass   |
+| Test that unauthorized users are redirected to the login page. | Pass   |
+| Check form validation works for invalid input.          | Pass   |
+
+### UPDATE CLIENT PAGE
+
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure the update client form loads with prefilled data. | Pass   |
+| Verify updates are saved correctly.                     | Pass   |
+| Test that unauthorized users cannot access this page.   | Pass   |
+| Confirm error handling for invalid client IDs.          | Pass   |
+
+### VIEW CLIENT PAGE
+
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure client details are displayed accurately.         | Pass   |
+| Test that unauthorized users cannot access this page.   | Pass   |
+| Verify error handling for non-existent client IDs.      | Pass   |
+
+### DELETE CLIENT FUNCTIONALITY
+
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure a client is deleted successfully upon confirmation. | Pass   |
+| Verify unauthorized users cannot delete clients.        | Pass   |
+| Confirm proper redirection to the dashboard after deletion. | Pass   |
 
 ### LOGIN PAGE
 
- Test                                      Result 
--------------------------------------------------
- Test description                         Pass   
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure the login page renders correctly.                | Pass   |
+| Verify valid user credentials successfully log in the user. | Pass   |
+| Test invalid credentials display an error message.      | Pass   |
+| Confirm authenticated users are redirected to the dashboard. | Pass   |
 
 ### REGISTRATION PAGE
 
- Test                                      Result 
--------------------------------------------------
- Test description                         Pass   
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure the registration form renders correctly.         | Pass   |
+| Verify valid form submissions create a new user account. | Pass   |
+| Test invalid inputs display appropriate error messages. | Pass   |
+| Confirm new users can log in immediately after registration. | Pass   |
 
-### LOGOUT PAGE
+### LOGOUT FUNCTIONALITY
 
- Test                                      Result 
--------------------------------------------------
- Test description                         Pass   
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Ensure users are logged out successfully.               | Pass   |
+| Verify logged-out users are redirected to the home page. | Pass   |
+| Test that logged-out users cannot access restricted pages. | Pass   |
 
 ### SECURITY
 
- Test                                      Result 
--------------------------------------------------
- Test description                         Pass   
+| Test Description                                        | Result |
+|---------------------------------------------------------|--------|
+| Verify all pages requiring authentication redirect unauthorized users to the login page. | Pass   |
+| Ensure sensitive actions (e.g., adding, updating, or deleting clients) are protected. | Pass   |
+| Test error handling for unexpected inputs or actions.   | Pass   |
+| Confirm no sensitive information is exposed to unauthorized users. | Pass   |
 
 ### Screenshots
 #### Successful Client Addition
