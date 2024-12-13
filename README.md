@@ -83,20 +83,31 @@ The `Client` table stores all relevant client data for the user. The table conta
 - **created_at**: A datetime field to store when the client was created.
 - **updated_at**: A datetime field to store when the client record was last updated.
 
-### Entity Relationship Diagram
+# Entity Relationship Diagram (ERD)
 
-+------------------+           +--------------------+
-|      User        |           |       Client       |
-+------------------+           +--------------------+
-| id (PK)          |           | id (PK)            |
-| username         |           | user (FK)          |
-| password         |           | name               |
-| email            |           | phone              |
-| date_joined      |           | location           |
-+------------------+           | email              |
-                               | created_at         |
-                               | updated_at         |
-                               +--------------------+
+## User Table
+| Field         | Type      | Description                       |
+|---------------|-----------|-----------------------------------|
+| `id`          | Primary Key (PK) | Auto-generated unique identifier |
+| `username`    | String    | Username of the user              |
+| `password`    | String    | Password for the user             |
+| `email`       | String    | Email of the user                 |
+| `date_joined` | DateTime | Date the user registered          |
+
+## Client Table
+| Field         | Type      | Description                              |
+|---------------|-----------|------------------------------------------|
+| `id`          | Primary Key (PK) | Auto-generated unique identifier        |
+| `user`        | Foreign Key (FK) | References `User` table (One-to-Many)    |
+| `name`        | String    | Name of the client                       |
+| `phone`       | String    | Phone number of the client               |
+| `location`    | String    | Location of the client                   |
+| `email`       | String    | Email of the client (optional)           |
+| `created_at`  | DateTime | Date the client was created              |
+| `updated_at`  | DateTime | Date the client was last updated         |
+
+## Relationship:
+- **One-to-Many**: A `User` can have many `Clients`, but each `Client` is associated with exactly one `User`.
 
 #### Database Relationships
 
