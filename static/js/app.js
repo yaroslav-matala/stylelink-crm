@@ -7,7 +7,10 @@ setTimeout(function() {
     if (message_timeout) {
         message_timeout.style.display = "none";
     }
-}, 5000);
+}, 5000); // 5 seconds
+
+
+// make rows clickable
 
 document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to make rows clickable
@@ -17,8 +20,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-window.onload = function () {
-    const testimonials = document.getElementById("testimonials");
-    testimonials.scrollLeft = 0; // Adjust the value to set the offset
-};

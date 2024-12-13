@@ -21,10 +21,6 @@
 - I want to search for clients by name, so I can find specific information easily.
 - I want to view my clients in a clean, intuitive layout for quick navigation.
 
-#### As an administrator:
-- I want to ensure only authenticated users can access sensitive features like adding clients.
-- I want to paginate results for better performance and usability.
-
 ### Wireframes
 Wireframes were created using **Balsamiq** to visualize the initial design and layout for mobile, tablet, and desktop views.
 
@@ -58,8 +54,7 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
 ## Agile Development
 
 ### Project Board
-The development process followed Agile methodologies. The [Project Board](#) on GitHub was used to track tasks, progress, and deliverables.  
-(*Insert link to your GitHub project board here.*)
+The development process followed Agile methodologies. The [Project Board](https://github.com/users/yaroslav-matala/projects/5) on GitHub was used to track tasks, progress, and deliverables.  
 
 ---
 
@@ -75,11 +70,9 @@ The development process followed Agile methodologies. The [Project Board](#) on 
 ### Screenshots
 #### Successful Client Addition
 ![Test Add Client Screenshot](#)  
-*Screenshot of a successful client addition test.*
 
 #### Mobile Responsiveness
 ![Responsive Test Screenshot](#)  
-*Screenshot showing proper layout adjustments on mobile.*
 
 ---
 
@@ -107,7 +100,7 @@ The development process followed Agile methodologies. The [Project Board](#) on 
   ```
 5. Access the app locally at http://127.0.0.1:8000
 
-For live deployment, the project is hosted on **Heroku** at: [Live Site.](#)
+For live deployment, the project is hosted on **Heroku** at: [Live Site.](https://stylelink-7c53adcbe9a8.herokuapp.com/)
 
 ---
 

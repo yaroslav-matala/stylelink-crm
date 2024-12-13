@@ -17,7 +17,9 @@ from django.contrib import messages
 
 # - Homepage
 def home(request):
-    return render(request, 'client_manager/index.html')
+    if request.user.is_authenticated:
+        return redirect('dashboard')  # Redirect authenticated users to the dashboard
+    return render(request, 'client_manager/index.html')  # Render the homepage for unauthenticated users
 
 
 # - Dashboard
