@@ -13,6 +13,12 @@
 
     <title>Stylelink - Simple Client Manager</title>
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A Django-powered client management app for organizing and managing client data effectively.">
+    <meta name="keywords" content="Client Management, Django, CRM, Progressive Web App, Allauth">
+    <meta name="author" content="Yaroslav Matala De Mazza">
+
+
     <!-- bootstrap bootswatch superhero theme -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/{{ request.session.theme|default:'superhero' }}/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -24,6 +30,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href=" {% static 'favicon/favicon-32x32.png'%} ">
     <link rel="icon" type="image/png" sizes="16x16" href=" {% static 'favicon/favicon-16x16.png'%} ">
+    <!-- Additional Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body>
