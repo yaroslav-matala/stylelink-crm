@@ -150,7 +150,17 @@ hr {
 #client-form #div_id_formula label,
 #client-form #div_id_notes label,
 #client-form #div_id_price label {
-  font-size: 2rem;
+  font-size: 1.7rem;
+}
+
+#client-form #div_id_name input,
+#client-form #div_id_phone input,
+#client-form #div_id_email input,
+#client-form #div_id_location input,
+#client-form #div_id_formula input,
+#client-form #div_id_notes input,
+#client-form #div_id_price input {
+  height: 60px;
 }
 
 #hint_id_password1 ul {
