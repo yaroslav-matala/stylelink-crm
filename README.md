@@ -122,8 +122,9 @@ For live deployment, the project is hosted on **Heroku** at: [Live Site.](#)
 
 ### Facilitators and Support
 - **David Calikes** - Facilitator. His guidance and support were essential throughout the project.
-- **Kevin Loughrey** - Program Code Coach. His expertise greatly influenced the project’s success.
 - **Stephen Bevan** - Coursemate. His support during development was crucial and highly appreciated.
+- **Kevin Loughrey** - Program Coding Coach. His expertise greatly influenced the project’s success.
+- **John Rearden** - Program Coding Coach. Assisted with technical issues, ensuring a smooth workflow. 
 
 ### Framework and Themes
 - The project uses the **Superhero theme** from **[Bootswatch](https://bootswatch.com)**, providing a clean and professional design.
