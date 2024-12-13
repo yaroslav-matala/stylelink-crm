@@ -85,6 +85,8 @@ hr {
 .image-container {
   position: relative;
   display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .image {
