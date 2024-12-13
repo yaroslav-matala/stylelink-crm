@@ -41,6 +41,9 @@ The app will be deployed on Heroku, making it accessible to users from anywhere.
 ### Wireframes
 Wireframes were created using **Balsamiq** to visualize the initial design and layout for mobile, tablet, and desktop views.
 
+![Stylelink Homepage Wireframe](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/Stylelink-Homepage.png)
+![Stylelink Dahsboard Wireframe](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/Stylelink-Dashboard.png)
+
 ---
 
 ## Features
@@ -75,7 +78,7 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
 The application uses a relational database to store client information. The database is built using **PostgreSQL** and consists of the following tables:
 
 # Entity Relationship Diagram (ERD)
-![Entity Relationship Diagram][]
+![Entity Relationship Diagram][https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/stylelink-erd.png]
 
 ## User Table
 | Field         | Type      | Description                       |
