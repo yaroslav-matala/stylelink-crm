@@ -1,6 +1,6 @@
 # Stylelink - Simple Client Manager
 
-![Am I Responsive Design]()
+![Am I Responsive Design](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/amiresponsive.png)
 
 ## Table of Contents
 1. [User Experience Design](#user-experience-design)
