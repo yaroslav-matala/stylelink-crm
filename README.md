@@ -54,8 +54,10 @@ Wireframes were created using **Balsamiq** to visualize the initial design and l
    - Fully functional across all screen sizes, built using Bootstrap's Superhero theme from Bootswatch.
 4. **Search Functionality**  
    - Search for clients by name for quick access.
-5. **Pagination**  
+5. - **Dashboard**: The dashboard displays a list of clients with pagination, search functionality, and client details such as name, phone, location, and associated user.
+6. **Pagination**  
    - Ensures smooth navigation even with large data sets.
+7. - **Theme Switcher**: Users can toggle between light and dark themes on the dashboard for a more personalized and comfortable viewing experience.
 
 ### Screenshots
 #### Dashboard Page
