@@ -192,10 +192,6 @@ hr {
   height: 3rem;
 }
 
-#search-button {
-  width: 18%;
-}
-
 /* View Client */
 #view-client-wrapper {
   max-width: 550px;
