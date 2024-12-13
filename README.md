@@ -122,7 +122,7 @@ For live deployment, the project is hosted on **Heroku** at: [Live Site.](#)
 
 ### Facilitators and Support
 - **David Calikes** - Facilitator. His guidance and support were essential throughout the project.
-- **Kevin Loughrey** - Program Subject Matter Expert and Code Coach. His expertise greatly influenced the project’s success.
+- **Kevin Loughrey** - Program Code Coach. His expertise greatly influenced the project’s success.
 - **Stephen Bevan** - Coursemate. His support during development was crucial and highly appreciated.
 
 ### Framework and Themes
