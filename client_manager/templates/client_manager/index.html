@@ -64,7 +64,7 @@
 
     <div class="row text-center d-none d-md-block">
         <div class="col-12">
-            <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg">create your account</a>
+            <a href="{% url 'account_signup' %}" class="btn btn-primary btn-xl">create your account</a>
         </div>
     </div>
 
@@ -122,11 +122,13 @@
         </div>
     </div> -->
 
-    <div class="container my-5">
+    <div class="container my-5 fs-5">
         <div class="row">
             <!-- Benefit 1 -->
             <div class="col-md-6 d-flex align-items-center mb-4">
-                <i class="fa-solid fa-people-group fa-2xl me-3"></i>
+                <div class="benefit-icon-wrapper text-center">
+                    <i class="fa-solid fa-people-group fa-2xl me-3"></i>
+                </div>
                 <div>
                     <h5 class="fw-bold">Organized Client Records</h5>
                     <p class="mb-0">Track client preferences and history effortlessly.</p>
@@ -134,7 +136,9 @@
             </div>
             <!-- Benefit 2 -->
             <div class="col-md-6 d-flex align-items-center mb-4">
-                <i class="fa-solid fa-forward fa-2xl me-3"></i>
+                <div class="benefit-icon-wrapper text-center">
+                    <i class="fa-solid fa-forward fa-2xl me-3"></i>
+                </div>
                 <div>
                     <h5 class="fw-bold">Time-Saving Tools</h5>
                     <p class="mb-0">Spend less time managing data and more time with clients.</p>
@@ -142,7 +146,9 @@
             </div>
             <!-- Benefit 3 -->
             <div class="col-md-6 d-flex align-items-center mb-4">
-                <i class="fa-solid fa-unlock-alt fa-2xl me-3"></i>
+                <div class="benefit-icon-wrapper text-center">
+                    <i class="fa-solid fa-unlock-alt fa-2xl me-3"></i>
+                </div>
                 <div>
                     <h5 class="fw-bold">Free and Accessible</h5>
                     <p class="mb-0">Get started now for free—no hidden fees.</p>
@@ -150,7 +156,9 @@
             </div>
             <!-- Benefit 4 -->
             <div class="col-md-6 d-flex align-items-center mb-4">
-                <i class="fa-regular fa-file-lines fa-2xl me-3"></i>
+                <div class="benefit-icon-wrapper text-center">
+                    <i class="fa-regular fa-file-lines fa-2xl me-3"></i>
+                </div>
                 <div>
                     <h5 class="fw-bold">Secure Data Management</h5>
                     <p class="mb-0">Keep your client records safe with reliable storage.</p>
@@ -162,15 +170,15 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <h3>
+                <h2 class="fs-1">
                     Stylelink is the all-in-one tool for hairstylists to <span class="text-primary">organize, track, and grow</span> their business
-                </h3>
+                </h2>
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col-12 col-md-12 text-center">
-                <a href="{% url 'account_signup' %}" class="btn btn-lg btn-primary">Start for Free</a>
+                <a href="{% url 'account_signup' %}" class="btn btn-xl btn-primary">Start for Free</a>
             </div>
         </div>
     </div>
@@ -184,7 +192,7 @@
                     <div class="overlay"></div>
                 </div>
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12 fs-5">
                 <h3 class="fw-bold my-3">Streamline Your Workflow</h3>
                 <p class="text-muted">
                     Easily add clients, manage their details, and keep track of preferences.
@@ -206,7 +214,7 @@
                     <div class="overlay"></div>
                 </div>
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12 fs-5">
                 <h3 class="fw-bold my-3">Formula Management</h3>
                 <p class="text-muted">
                     Organize and store important formulas related to client services. Whether it’s hair color formulas or treatment plans, you can quickly reference and apply them for consistency and accuracy.
@@ -227,7 +235,7 @@
                     <div class="overlay"></div>
                 </div>
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12 fs-5">
                 <h3 class="fw-bold mb-3">Client Notes</h3>
                 <p class="text-muted">
                     Keep track of essential details about each client. Add notes about preferences, past conversations, or any special requests to offer a more personalized service.
@@ -235,7 +243,7 @@
                 <ul class="list-unstyled">
                     <li><i class="fa-solid fa-check text-primary me-2"></i> Record client preferences and details</li>
                     <li><i class="fa-solid fa-check text-primary me-2"></i> Quick access to notes during sessions</li>
-                    <li><i class="fa-solid fa-check text-primary me-2"></i> Improve client relationships with personalized interactions</li>
+                    <li><i class="fa-solid fa-check text-primary me-2"></i> Personalize interactions with your client</li>
                 </ul>
             </div>
         </div>
@@ -245,20 +253,19 @@
     
     <div class="container mt-5 mb-3">
         <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-6">
                 <div class="card text-center shadow-lg">
                     <div class="card-header bg-primary text-white">
                         <h4 class="fw-bold">Unlimited Free</h4>
                     </div>
                     <div class="card-body">
-                        <h2 class="display-5 fw-bold text-primary">€0</h2>
-                        <p class="text-muted mb-4">Forever Free</p>
+                        <h2 class="display-5 fw-bold">€0</h2>
+                        <p class="text-muted mb-4">Temporarily Free</p>
                         <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg mb-4">Start Now</a>
                         <ul class="list-unstyled text-start ps-3">
-                            <li><i class="fa-solid fa-check text-primary me-2"></i>Effortless client management</li>
-                            <li><i class="fa-solid fa-check text-primary me-2"></i>Client record tracking</li>
-                            <li><i class="fa-solid fa-check text-primary me-2"></i>Accessible across devices</li>
-                            <li><i class="fa-solid fa-check text-primary me-2"></i>Completely free, forever</li>
+                            <li class="fs-4"><i class="fa-solid fa-check text-primary me-2"></i>Effortless client management</li>
+                            <li class="fs-4"><i class="fa-solid fa-check text-primary me-2"></i>Client record tracking</li>
+                            <li class="fs-4"><i class="fa-solid fa-check text-primary me-2"></i>Accessible across devices</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-light">
@@ -281,68 +288,74 @@
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">"An essential tool for keeping my client records organized and accessible."</p>
-                    <h5 class="card-title text-primary">— Emily Carter, Freelance Hairstylist</h5>
+                    <h5 class="card-title">— Emily Carter, Freelance Hairstylist</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">"This platform streamlined my workflow and saved me countless hours every week!"</p>
-                    <h5 class="card-title text-primary">— Ryan Anderson, Salon Owner</h5>
+                    <h5 class="card-title">— Ryan Anderson, Salon Owner</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">“Finally, a client management solution that’s both simple and free.”</p>
-                    <h5 class="card-title text-primary">— Sophia Nguyen, Beauty Consultant</h5>
+                    <h5 class="card-title">— Sophia Nguyen, Beauty Consultant</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">“I love how easy it is to track client preferences and stay prepared for every appointment.”</p>
-                    <h5 class="card-title text-primary">— Ava Johnson, Makeup Artist</h5>
+                    <h5 class="card-title">— Ava Johnson, Makeup Artist</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">“A fantastic resource for small businesses looking to stay organized without breaking the bank.”</p>
-                    <h5 class="card-title text-primary">— Michael Brown, Independent Hairdresser</h5>
+                    <h5 class="card-title">— Michael Brown, Independent Hairdresser</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">“The perfect way to manage my growing client base and keep track of all their details.”</p>
-                    <h5 class="card-title text-primary">— Hannah Thompson, Bridal Hair Specialist</h5>
+                    <h5 class="card-title">— Hannah Thompson, Bridal Hair Specialist</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">“Free, intuitive, and reliable—this tool is a lifesaver for my business.”</p>
-                    <h5 class="card-title text-primary">— Olivia Davis, Nail Technician</h5>
+                    <h5 class="card-title">— Olivia Davis, Nail Technician</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">“The notes and client history features are game-changers for my customer service.”</p>
-                    <h5 class="card-title text-primary">— Benjamin Walker, Barbershop Owner</h5>
+                    <h5 class="card-title">— Benjamin Walker, Barbershop Owner</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0" >
                 <div class="card-body">
                     <p class="card-text fs-4">“A well-designed, easy-to-use app that meets all my needs.”</p>
-                    <h5 class="card-title text-primary">— Grace Williams, Personal Stylist</h5>
+                    <h5 class="card-title">— Grace Williams, Personal Stylist</h5>
                 </div>
             </div>
             <div class="testimonial card mx-2 flex-shrink-0">
                 <div class="card-body">
                     <p class="card-text fs-4">“I’m amazed at how much value this platform offers for free.”</p>
-                    <h5 class="card-title text-primary">— Ethan Martinez, Beauty Salon Manager</h5>
+                    <h5 class="card-title">— Ethan Martinez, Beauty Salon Manager</h5>
                 </div>
             </div>
             <!-- Add more testimonials as needed -->
         </div>
     </div>
 
-    <div class="row text-center mb-5">
+    <div class="d-none d-md-block row text-center mb-5">
+        <div class="col-12">
+            <a href="{% url 'account_signup' %}" class="btn btn-xl btn-primary">Take Control of Your Business Today</a>
+        </div>
+    </div>
+
+    <div class="d-md-none row text-center mb-5">
         <div class="col-12">
             <a href="{% url 'account_signup' %}" class="btn btn-lg btn-primary">Take Control of Your Business Today</a>
         </div>
