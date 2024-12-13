@@ -237,6 +237,13 @@ The development process followed Agile methodologies. The [Project Board](https:
 
 ---
 
+## Peformance: Lighthouse Test
+The performance of the Client Manager application was evaluated using **Google Lighthouse** to ensure a high-quality user experience. Below are the results from the Lighthouse test:
+
+![Lighthouse Performance Test](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/performance.png)
+
+---
+
 ## Deployment
 
 ### Steps for Deployment
