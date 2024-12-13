@@ -87,7 +87,6 @@ The application uses a relational database to store client information. The data
 | `username`    | String    | Username of the user              |
 | `password`    | String    | Password for the user             |
 | `email`       | String    | Email of the user                 |
-| `date_joined` | DateTime | Date the user registered          |
 
 ## Client Table
 | Field         | Type      | Description                              |
@@ -102,7 +101,6 @@ The application uses a relational database to store client information. The data
 | `notes`       | Text      | Additional notes or comments (optional)  |
 | `price`       | Decimal   | Price associated with client (optional)  |
 | `created_at`  | DateTime  | Date the client was created              |
-| `updated_at`  | DateTime  | Date the client was last updated         |
 
 ## Relationship:
 - **One-to-Many**: A `User` can have many `Clients`, but each `Client` is associated with exactly one `User`.
