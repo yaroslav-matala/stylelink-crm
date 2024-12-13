@@ -99,6 +99,8 @@ The `Client` table stores all relevant client data for the user. The table conta
 
 Django’s built-in migration system will be used to create and manage the database schema. This allows for easy version control of the database and ensures that changes to the models are automatically reflected in the database structure.
 
+---
+
 ## Agile Development
 
 ### Project Board
@@ -115,7 +117,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 - Search Functionality: Accurate results for valid searches and appropriate feedback for no results.
 - Responsive Design: Tested on Chrome DevTools, mobile devices, and desktop screens.
 
-### HOME PAGE
+#### HOME PAGE
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -123,7 +125,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Verify that unauthenticated users see the correct UI.   | Pass   |
 | Confirm redirection to the dashboard for logged-in users. | Pass   |
 
-### DASHBOARD PAGE
+#### DASHBOARD PAGE
 
 | Test Description                                         | Result |
 |----------------------------------------------------------|--------|
@@ -132,7 +134,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Test search functionality filters results accurately.   | Pass   |
 | Confirm unauthorized access redirects to the login page. | Pass   |
 
-### ADD CLIENT PAGE
+#### ADD CLIENT PAGE
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -141,7 +143,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Test that unauthorized users are redirected to the login page. | Pass   |
 | Check form validation works for invalid input.          | Pass   |
 
-### UPDATE CLIENT PAGE
+#### UPDATE CLIENT PAGE
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -150,7 +152,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Test that unauthorized users cannot access this page.   | Pass   |
 | Confirm error handling for invalid client IDs.          | Pass   |
 
-### VIEW CLIENT PAGE
+#### VIEW CLIENT PAGE
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -158,7 +160,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Test that unauthorized users cannot access this page.   | Pass   |
 | Verify error handling for non-existent client IDs.      | Pass   |
 
-### DELETE CLIENT FUNCTIONALITY
+#### DELETE CLIENT FUNCTIONALITY
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -166,7 +168,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Verify unauthorized users cannot delete clients.        | Pass   |
 | Confirm proper redirection to the dashboard after deletion. | Pass   |
 
-### LOGIN PAGE
+#### LOGIN PAGE
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -175,7 +177,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Test invalid credentials display an error message.      | Pass   |
 | Confirm authenticated users are redirected to the dashboard. | Pass   |
 
-### REGISTRATION PAGE
+#### REGISTRATION PAGE
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -184,7 +186,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Test invalid inputs display appropriate error messages. | Pass   |
 | Confirm new users can log in immediately after registration. | Pass   |
 
-### LOGOUT FUNCTIONALITY
+#### LOGOUT FUNCTIONALITY
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -192,7 +194,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Verify logged-out users are redirected to the home page. | Pass   |
 | Test that logged-out users cannot access restricted pages. | Pass   |
 
-### SECURITY
+#### SECURITY
 
 | Test Description                                        | Result |
 |---------------------------------------------------------|--------|
@@ -201,7 +203,7 @@ The development process followed Agile methodologies. The [Project Board](https:
 | Test error handling for unexpected inputs or actions.   | Pass   |
 | Confirm no sensitive information is exposed to unauthorized users. | Pass   |
 
-### Screenshots
+## Screenshots
 #### Successful Client Addition
 ![Test Add Client Screenshot](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/client-added-successfully.png)  
 
@@ -238,12 +240,14 @@ For live deployment, the project is hosted on **Heroku** at: [Live Site.](https:
 
 ---
 
-### Future Features
+## Future Features
 
 - **Help Button with Walkthrough Guide**  
   A "Help" button will be added to the dashboard page. When clicked, it will activate a step-by-step walkthrough guide on the screen to help users navigate through the features of the app. This guide will highlight key areas of the dashboard, such as adding clients, searching, and pagination, providing useful instructions for new users and those needing assistance.
 
-### Technology Stack
+---
+
+## Technology Stack
 
 This project utilizes the following technologies:
 
@@ -256,6 +260,8 @@ This project utilizes the following technologies:
 - **Heroku**: A platform-as-a-service (PaaS) that is used to deploy and run the web application.
 - **Git**: Version control for source code management.
 - **GitHub**: A platform for hosting and collaborating on code, used to store the project repository.
+
+---
 
 ## Credits
 
