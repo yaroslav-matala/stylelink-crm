@@ -65,6 +65,48 @@ The development process followed Agile methodologies. The [Project Board](https:
 - Search Functionality: Accurate results for valid searches and appropriate feedback for no results.
 - Responsive Design: Tested on Chrome DevTools, mobile devices, and desktop screens.
 
+### HOME PAGE
+
+ Test                                      Result 
+-------------------------------------------------
+ Test description                         Pass   
+
+### ABOUT PAGE
+
+ Test                                      Result 
+-------------------------------------------------
+ Test description                         Pass   
+
+### PROFILE PAGE
+
+ Test                                      Result 
+-------------------------------------------------
+ Test description                         Pass   
+
+### LOGIN PAGE
+
+ Test                                      Result 
+-------------------------------------------------
+ Test description                         Pass   
+
+### REGISTRATION PAGE
+
+ Test                                      Result 
+-------------------------------------------------
+ Test description                         Pass   
+
+### LOGOUT PAGE
+
+ Test                                      Result 
+-------------------------------------------------
+ Test description                         Pass   
+
+### SECURITY
+
+ Test                                      Result 
+-------------------------------------------------
+ Test description                         Pass   
+
 ### Screenshots
 #### Successful Client Addition
 ![Test Add Client Screenshot](https://github.com/yaroslav-matala/stylelink-crm/blob/main/static/readme_images/client-added-successfully.png)  
