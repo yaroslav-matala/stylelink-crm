@@ -85,10 +85,7 @@ MIDDLEWARE = [
 
 # settings.py
 BOOTSWATCH_THEMES = [
-    'darkly', 'flatly', 'journal',
-    'litera', 'lumen', 'lux', 'materia', 'minty', 'morph',
-    'pulse', 'quartz', 'sandstone', 'simplex', 'sketchy',
-    'slate', 'solar', 'spacelab', 'superhero', 'united', 'yeti'
+    'darkly', 'quartz', 'solar', 'superhero'
 ]
 
 ROOT_URLCONF = 'stylelink.urls'
